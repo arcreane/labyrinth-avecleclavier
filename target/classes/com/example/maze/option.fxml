@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="473.0" prefWidth="749.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.maze.Controller.HomeController">
+<AnchorPane prefHeight="473.0" prefWidth="749.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.maze.Controller.OptionController">
    <children>
-      <TextField fx:id="txt_options" alignment="CENTER" layoutX="279.0" layoutY="29.0" prefHeight="37.0" prefWidth="192.0" text="OPTIONS " />
+      <TextField fx:id="txt_options" alignment="CENTER" layoutX="279.0" layoutY="24.0" prefHeight="37.0" prefWidth="192.0" text="OPTIONS " />
       <TextField fx:id="txt_sound" alignment="CENTER" layoutX="160.0" layoutY="131.0" prefHeight="37.0" prefWidth="67.0" text="Sound " />
-      <ProgressBar fx:id="progress_sound" layoutX="279.0" layoutY="140.0" prefHeight="19.0" prefWidth="217.0" progress="0.0" />
+      <Slider layoutX="282.0" layoutY="142.0" prefHeight="16.0" prefWidth="293.0" />
+      <TextField fx:id="txt_sound1" alignment="CENTER" layoutX="160.0" layoutY="192.0" prefHeight="37.0" prefWidth="67.0" text="Light" />
+      <Slider layoutX="282.0" layoutY="203.0" prefHeight="16.0" prefWidth="293.0" />
    </children>
 </AnchorPane>

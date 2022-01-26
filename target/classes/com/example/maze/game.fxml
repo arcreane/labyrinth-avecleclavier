@@ -85,32 +85,31 @@
     </MenuBar>
     <SplitPane dividerPositions="0.33797327394209353" focusTraversable="true" prefHeight="695.0" prefWidth="899.0" VBox.vgrow="ALWAYS">
       <items>
-        <AnchorPane fx:id="master_anchor" maxHeight="1500.0" maxWidth="300.0" prefHeight="1500.0" prefWidth="300.0">
-          <children>
-                  <AnchorPane fx:id="interface_menu" maxHeight="1500.0" maxWidth="300.0" prefHeight="1500.0" prefWidth="300.0" style="-fx-background-color: #001824;" stylesheets="@../../../../java/style/menu_game.css">
+        <AnchorPane fx:id="master_anchor" maxHeight="1500.0" maxWidth="300.0" prefHeight="1500.0" prefWidth="300.0" style="-fx-background-color: #001824;" stylesheets="@../../../../java/style/menu_game.css">
+               <children>
+                  <Button fx:id="btn_menu" layoutX="14.0" layoutY="27.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="108.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px 2px 2px 2px;" stylesheets="@../../../../java/style/menu_game.css" text="MENU" textAlignment="CENTER" textFill="WHITE" />
+                  <AnchorPane fx:id="interface_menu" layoutY="75.0" maxHeight="1500.0" maxWidth="300.0" prefHeight="1410.0" prefWidth="300.0" style="-fx-background-color: #001824;" stylesheets="@../../../../java/style/menu_game.css">
                      <children>
                         <Button fx:id="btn_play" layoutY="271.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="300.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 4px 0px 2px 0px;" stylesheets="@../../../../java/style/menu_game.css" text="PLAY" textFill="WHITE" />
                         <Button fx:id="btn_rules" layoutY="389.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="300.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px 0px 2px 0px;" stylesheets="@../../../../java/style/menu_game.css" text="RULES" textFill="WHITE" />
                         <Button fx:id="btn_quit" layoutX="14.0" layoutY="610.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="108.0" style="-fx-background-color: transparent; -fx-border-color: red; -fx-border-width: 2px 2px 2px 2px;" stylesheets="@../../../../java/style/menu_game.css" text="QUIT" textFill="RED">
                            <font>
                               <Font size="16.0" />
-                           </font></Button>
-                        <Button fx:id="btn_menu" layoutX="14.0" layoutY="33.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="98.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px 2px 2px 2px;" stylesheets="@../../../../java/style/menu_game.css" text="MENU" textFill="WHITE">
-                           <font>
-                              <Font size="15.0" />
-                           </font></Button>
+                           </font>
+                        </Button>
                         <Button fx:id="btn_recents" layoutY="325.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="300.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px 0px 2px 0px;" stylesheets="@../../../../java/style/menu_game.css" text="RECENTS" textFill="WHITE" />
                         <Button fx:id="btn_options" layoutY="443.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="300.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px 0px 4px 0px;" stylesheets="@../../../../java/style/menu_game.css" text="OPTIONS" textFill="WHITE" />
                      </children>
                   </AnchorPane>
-          </children>
+               </children>
         </AnchorPane>
             <VBox fx:id="boxGlobal" prefHeight="200.0" prefWidth="100.0">
-               <children>
                   <VBox fx:id="boxGame" prefHeight="580.0" prefWidth="669.0" />
+               <VBox fx:id="box_Recents" prefHeight="200.0" prefWidth="100.0" />
                   <VBox fx:id="boxRules" prefHeight="200.0" prefWidth="100.0" />
-                  <VBox fx:id="boxOptions" prefHeight="200.0" prefWidth="100.0" />
-               </children>
+                  <VBox fx:id="boxOptions" prefHeight="200.0" prefWidth="100.0">
+                      <fx:include source="option.fxml" />
+                  </VBox>
             </VBox>
       </items>
     </SplitPane>

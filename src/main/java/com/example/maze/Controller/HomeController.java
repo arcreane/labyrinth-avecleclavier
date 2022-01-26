@@ -4,11 +4,15 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseButton;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
-
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -25,6 +29,9 @@ public class HomeController implements Initializable {
 
     @FXML
     private VBox boxRules;
+
+    @FXML
+    private VBox box_Recents;
 
     @FXML
     private Button btn_menu;
@@ -58,12 +65,26 @@ public class HomeController implements Initializable {
 
 
         btn_menu.setOnMouseClicked(action -> {
-            interface_menu.getChildren().addAll(btn_play,btn_rules,btn_options,btn_quit,btn_recents);
+            if(action.getButton().equals(MouseButton.PRIMARY)){
+                if(!interface_menu.isVisible()){
+                    interface_menu.getChildren().addAll(btn_play,btn_rules,btn_options,btn_quit,btn_recents);
+                    interface_menu.setVisible(true);
+                }
+                else if(interface_menu.isVisible()){
+                    interface_menu.getChildren().removeAll(btn_play,btn_rules,btn_options,btn_quit,btn_recents);
+                    interface_menu.setVisible(false);
+                }
+            };
+        });
+
+
+        btn_options.setOnMouseClicked(option->{
+            boxGlobal.getChildren().addAll(boxOptions);
+
         });
 
         btn_quit.setOnAction(action -> {
             Platform.exit();
-
         });
 
     }
