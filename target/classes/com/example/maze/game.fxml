@@ -40,6 +40,7 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.maze.Controller.HomeController">
   <children>
@@ -82,17 +83,24 @@
         </Menu>
       </menus>
     </MenuBar>
-    <SplitPane dividerPositions="0.2505567928730512" focusTraversable="true" prefHeight="695.0" prefWidth="899.0" VBox.vgrow="ALWAYS">
+    <SplitPane dividerPositions="0.33797327394209353" focusTraversable="true" prefHeight="695.0" prefWidth="899.0" VBox.vgrow="ALWAYS">
       <items>
-        <AnchorPane fx:id="master_anchor">
+        <AnchorPane fx:id="master_anchor" maxHeight="1500.0" maxWidth="300.0" prefHeight="1500.0" prefWidth="300.0">
           <children>
-                  <AnchorPane fx:id="interface_menu" layoutX="19.0" layoutY="19.0" prefHeight="532.0" prefWidth="185.0" style="-fx-background-color: lightyellow;" stylesheets="@../../../../java/style/menu_game.css">
+                  <AnchorPane fx:id="interface_menu" maxHeight="1500.0" maxWidth="300.0" prefHeight="1500.0" prefWidth="300.0" style="-fx-background-color: #001824;" stylesheets="@../../../../java/style/menu_game.css">
                      <children>
-                        <Button fx:id="btn_play" layoutX="55.0" layoutY="143.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="75.0" style="-fx-background-color: skyblue;" stylesheets="@../../../../java/style/menu_game.css" text="Play" textFill="WHITE" />
-                        <Button fx:id="btn_option" layoutX="55.0" layoutY="278.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="75.0" style="-fx-background-color: lightgreen;" stylesheets="@../../../../java/style/menu_game.css" text="Options" textFill="WHITE" />
-                        <Button fx:id="btn_quit" layoutX="55.0" layoutY="372.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="75.0" style="-fx-background-color: red;" stylesheets="@../../../../java/style/menu_game.css" text="Quit" textFill="WHITE" />
-                        <Button fx:id="btn_menu" layoutX="35.0" layoutY="14.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="115.0" style="-fx-background-color: skyblue;" stylesheets="@../../../../java/style/menu_game.css" text="Menu Game" textFill="WHITE" />
-                        <Button fx:id="btn_rules" layoutX="55.0" layoutY="214.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="75.0" style="-fx-background-color: lightgreen;" stylesheets="@../../../../java/style/menu_game.css" text="Rules" textFill="WHITE" />
+                        <Button fx:id="btn_play" layoutY="271.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="300.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 4px 0px 2px 0px;" stylesheets="@../../../../java/style/menu_game.css" text="PLAY" textFill="WHITE" />
+                        <Button fx:id="btn_rules" layoutY="389.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="300.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px 0px 2px 0px;" stylesheets="@../../../../java/style/menu_game.css" text="RULES" textFill="WHITE" />
+                        <Button fx:id="btn_quit" layoutX="14.0" layoutY="610.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="108.0" style="-fx-background-color: transparent; -fx-border-color: red; -fx-border-width: 2px 2px 2px 2px;" stylesheets="@../../../../java/style/menu_game.css" text="QUIT" textFill="RED">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Button>
+                        <Button fx:id="btn_menu" layoutX="14.0" layoutY="33.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="98.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px 2px 2px 2px;" stylesheets="@../../../../java/style/menu_game.css" text="MENU" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Button>
+                        <Button fx:id="btn_recents" layoutY="325.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="300.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px 0px 2px 0px;" stylesheets="@../../../../java/style/menu_game.css" text="RECENTS" textFill="WHITE" />
+                        <Button fx:id="btn_options" layoutY="443.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="300.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px 0px 4px 0px;" stylesheets="@../../../../java/style/menu_game.css" text="OPTIONS" textFill="WHITE" />
                      </children>
                   </AnchorPane>
           </children>

@@ -27,10 +27,10 @@ public class HomeController implements Initializable {
     private VBox boxRules;
 
     @FXML
-    private Button btn_option;
+    private Button btn_menu;
 
     @FXML
-    private Button btn_rules;
+    private Button btn_options;
 
     @FXML
     private Button btn_play;
@@ -39,29 +39,26 @@ public class HomeController implements Initializable {
     private Button btn_quit;
 
     @FXML
+    private Button btn_recents;
+
+    @FXML
+    private Button btn_rules;
+
+    @FXML
     private AnchorPane interface_menu;
 
     @FXML
     private AnchorPane master_anchor;
 
-    @FXML
-    private Button btn_menu;
-
-    @FXML
-    private Font x1;
-
-    @FXML
-    private Color x2;
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        interface_menu.getChildren().removeAll(btn_play,btn_option,btn_quit,btn_rules);
+        interface_menu.getChildren().removeAll(btn_play,btn_options,btn_quit,btn_rules,btn_recents);
         boxGlobal.getChildren().removeAll(boxGame,boxRules,boxOptions);
 
 
         btn_menu.setOnMouseClicked(action -> {
-            interface_menu.getChildren().addAll(btn_play,btn_rules,btn_option,btn_quit);
+            interface_menu.getChildren().addAll(btn_play,btn_rules,btn_options,btn_quit,btn_recents);
         });
 
         btn_quit.setOnAction(action -> {
