@@ -77,10 +77,12 @@ public class HomeController implements Initializable {
             };
         });
 
+        btn_play.setOnMouseClicked(option->{
+            boxGlobal.getChildren().addAll(boxGame);
+        });
 
         btn_options.setOnMouseClicked(option->{
             boxGlobal.getChildren().addAll(boxOptions);
-
         });
 
         btn_quit.setOnAction(action -> {
