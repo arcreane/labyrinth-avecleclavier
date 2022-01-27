@@ -67,4 +67,5 @@ public class DifficultyController implements Initializable {
         get_text.setText(mydifficulties);
 
     }
+
 }
