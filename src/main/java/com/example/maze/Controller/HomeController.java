@@ -5,8 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseButton;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.fxml.FXML;
@@ -19,10 +18,16 @@ import java.util.ResourceBundle;
 public class HomeController implements Initializable {
 
     @FXML
+    private HBox boxDifficulty;
+
+    @FXML
     private VBox boxGame;
 
     @FXML
     private VBox boxGlobal;
+
+    @FXML
+    private VBox boxLabirynthe;
 
     @FXML
     private VBox boxOptions;
@@ -61,7 +66,7 @@ public class HomeController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         interface_menu.getChildren().removeAll(btn_play,btn_options,btn_quit,btn_rules,btn_recents);
-        boxGlobal.getChildren().removeAll(boxGame,boxRules,boxOptions);
+        boxGlobal.getChildren().removeAll(boxGame,boxRules,boxOptions,boxDifficulty);
 
 
         btn_menu.setOnMouseClicked(action -> {
@@ -78,7 +83,11 @@ public class HomeController implements Initializable {
         });
 
         btn_play.setOnMouseClicked(option->{
-            boxGlobal.getChildren().addAll(boxGame);
+            boxGlobal.getChildren().addAll(boxDifficulty);
+        });
+
+        btn_rules.setOnMouseClicked(option->{
+            boxGlobal.getChildren().addAll(boxRules);
         });
 
         btn_options.setOnMouseClicked(option->{
