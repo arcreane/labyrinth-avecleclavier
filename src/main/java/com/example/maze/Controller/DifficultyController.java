@@ -1,15 +1,13 @@
 package com.example.maze.Controller;
 
 
+import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
-
 import java.net.URL;
+import java.util.Arrays;
 import java.util.ResourceBundle;
-
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Line;
@@ -19,19 +17,10 @@ import javafx.scene.shape.Rectangle;
 public class DifficultyController implements Initializable {
 
     @FXML
-    private Button btn_confirm_hard;
-
-    @FXML
-    private CheckBox check_easy;
-
-    @FXML
-    private CheckBox check_hard;
-
-    @FXML
-    private CheckBox check_normal;
-
-    @FXML
     private Pane boxDifficulty;
+
+    @FXML
+    private Button btn_confirm_hard;
 
     @FXML
     private Line line2;
@@ -54,15 +43,28 @@ public class DifficultyController implements Initializable {
     @FXML
     private TextField txt_title;
 
+    @FXML
+    private ChoiceBox<String> choice_difficulty;
+
+    @FXML
+    private Label get_text;
+
+    @FXML
+    private String[] level = {"Easy","Normal","Hard"};
+
+
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void initialize(URL arg0, ResourceBundle arg1) {
 
+        choice_difficulty.getItems().addAll(level);
+        choice_difficulty.setOnAction(this::getlevel);
 
-        btn_confirm_hard.setOnMouseClicked(confirm->{
-            if(confirm.getButton().equals(MouseButton.PRIMARY)){
-                boxDifficulty.getChildren().removeAll(check_easy,check_normal,check_hard,btn_confirm_hard,txt_title,square,square2,square3,line2,line3,line4);
-            }
-        });
+    }
+
+    public void getlevel (ActionEvent event){
+
+        String mydifficulties = choice_difficulty.getValue();
+        get_text.setText(mydifficulties);
 
     }
 }
