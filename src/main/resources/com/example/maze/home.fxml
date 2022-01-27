@@ -73,7 +73,7 @@
                   </children></VBox>
                 <VBox fx:id="box_Recents" prefHeight="200.0" prefWidth="100.0" />
                   <VBox fx:id="boxRules" prefHeight="200.0" prefWidth="100.0">
-                        <fx:include source="rules.fxml"></fx:include>
+                      <fx:include source="rules.fxml"/>
                     </VBox>
                 <VBox fx:id="boxOptions" prefHeight="200.0" prefWidth="100.0">
                       <fx:include source="option.fxml" />

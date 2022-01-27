@@ -83,15 +83,42 @@ public class HomeController implements Initializable {
         });
 
         btn_play.setOnMouseClicked(option->{
-            boxGlobal.getChildren().addAll(boxDifficulty);
+            if(option.getButton().equals(MouseButton.PRIMARY)){
+                if(!boxDifficulty.isVisible()){
+                    boxGlobal.getChildren().addAll(boxDifficulty);
+                    boxDifficulty.setVisible(true);
+                }
+                else if(boxDifficulty.isVisible()){
+                    boxGlobal.getChildren().removeAll(boxDifficulty);
+                    boxDifficulty.setVisible(false);
+                }
+            };
         });
 
         btn_rules.setOnMouseClicked(option->{
-            boxGlobal.getChildren().addAll(boxRules);
+            if(option.getButton().equals(MouseButton.PRIMARY)){
+                if(!boxRules.isVisible()){
+                    boxGlobal.getChildren().addAll(boxRules);
+                    boxRules.setVisible(true);
+                }
+                else if(boxRules.isVisible()){
+                    boxGlobal.getChildren().removeAll(boxRules);
+                    boxRules.setVisible(false);
+                }
+            };
         });
 
-        btn_options.setOnMouseClicked(option->{
-            boxGlobal.getChildren().addAll(boxOptions);
+        btn_options.setOnMouseClicked(options->{
+            if(options.getButton().equals(MouseButton.PRIMARY)){
+                if(!boxOptions.isVisible()){
+                    boxGlobal.getChildren().addAll(boxOptions);
+                    boxOptions.setVisible(true);
+                }
+                else if(boxOptions.isVisible()){
+                    boxGlobal.getChildren().removeAll(boxOptions);
+                    boxOptions.setVisible(false);
+                }
+            };
         });
 
         btn_quit.setOnAction(action -> {

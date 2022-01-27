@@ -36,13 +36,17 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="image_rules" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="384.0" prefWidth="724.0" stylesheets="@../../../../java/style/menu_game.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="image_rules" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="384.0" prefWidth="724.0" stylesheets="@../../../../java/style/menu_game.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.maze.Controller.RulesController">
    <children>
       <Button fx:id="btn_confirm_rules" layoutX="583.0" layoutY="315.0" mnemonicParsing="false" text="OK" />
       <TextField fx:id="txt_rules" alignment="CENTER" layoutX="291.0" layoutY="14.0" text="Rules of the game " />
-      <TextField fx:id="phrase1_rules" alignment="CENTER" layoutX="256.0" layoutY="114.0" prefHeight="26.0" prefWidth="225.0" text="The goal of the game is simple. " />
-      <TextField fx:id="phrase2_rules" layoutX="168.0" layoutY="154.0" prefHeight="26.0" prefWidth="400.0" text="You will have to fill in all the boxes before the end of the chrono !" />
-      <TextField fx:id="phrase3_rules" layoutX="48.0" layoutY="200.0" prefHeight="26.0" prefWidth="639.0" text="To be able to move on this game you can use either your mouse or the directional arrows of your keyboard." />
-      <TextField fx:id="phrase4_rules" layoutX="133.0" layoutY="257.0" prefHeight="26.0" prefWidth="468.0" text="There are different levels with different difficulties in order to test your limtes." />
+      <AnchorPane fx:id="paneRules" layoutX="48.0" layoutY="67.0" prefHeight="244.0" prefWidth="665.0">
+         <children>
+            <TextField fx:id="phrase1_rules" alignment="CENTER" layoutX="220.0" layoutY="14.0" prefHeight="26.0" prefWidth="225.0" text="The goal of the game is simple. " />
+            <TextField fx:id="phrase2_rules" layoutX="133.0" layoutY="63.0" prefHeight="26.0" prefWidth="400.0" text="You will have to fill in all the boxes before the end of the chrono !" />
+            <TextField fx:id="phrase3_rules" layoutX="14.0" layoutY="109.0" prefHeight="26.0" prefWidth="639.0" text="To be able to move on this game you can use either your mouse or the directional arrows of your keyboard." />
+            <TextField fx:id="phrase4_rules" layoutX="99.0" layoutY="166.0" prefHeight="26.0" prefWidth="468.0" text="There are different levels with different difficulties in order to test your limtes." />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
