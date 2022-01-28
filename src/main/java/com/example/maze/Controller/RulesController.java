@@ -40,14 +40,5 @@ public class RulesController implements Initializable {
             image_rules.getChildren().addAll(phrase1_rules,phrase2_rules,phrase3_rules,phrase4_rules,txt_rules,btn_confirm_rules);
             image_rules.setVisible(true);
         }
-
-        btn_confirm_rules.setOnMouseClicked(confirm_rules->{
-            if(!confirm_rules.getButton().equals(MouseButton.PRIMARY)){
-                if (image_rules.isVisible()){
-                    image_rules.getChildren().removeAll(phrase1_rules,phrase2_rules,phrase3_rules,phrase4_rules,txt_rules,btn_confirm_rules);
-                    image_rules.setVisible(false);
-                }
-            }
-        });
     }
 }

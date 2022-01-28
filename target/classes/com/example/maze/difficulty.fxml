@@ -6,18 +6,35 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane prefHeight="343.0" prefWidth="546.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.maze.Controller.DifficultyController">
+<AnchorPane prefHeight="343.0" prefWidth="546.0" style="-fx-background-color: #001824;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.maze.Controller.DifficultyController">
    <children>
-      <Pane fx:id="boxDifficulty" layoutY="-1.0" prefHeight="349.0" prefWidth="547.0" style="-fx-background-color: #001824;">
+      <Pane fx:id="boxDifficulty" layoutX="46.0" layoutY="35.0" prefHeight="273.0" prefWidth="455.0">
          <children>
-            <Button fx:id="btn_confirm_hard" layoutX="228.0" layoutY="232.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #001824; -fx-border-color: white;" text="OK" textFill="WHITE" />
-            <TextField fx:id="txt_title" alignment="CENTER" layoutX="194.0" layoutY="14.0" promptText="Difficulty Game" style="-fx-background-color: #001824; -fx-border-color: white;" />
-            <ChoiceBox fx:id="choice_difficulty" layoutX="199.0" layoutY="63.0" prefWidth="150.0" />
-            <Pane layoutX="222.0" layoutY="167.0" prefHeight="38.0" prefWidth="39.0" />
+            <Button fx:id="btn_confirm_hard" layoutX="196.0" layoutY="233.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #001824; -fx-border-color: white;" text="OK" textFill="WHITE" />
+            <TextField fx:id="txt_title" alignment="CENTER" layoutX="161.0" layoutY="14.0" promptText="Difficulty Game " style="-fx-background-color: #001824; -fx-border-color: white;" />
+            <ChoiceBox fx:id="choice_difficulty" layoutX="166.0" layoutY="61.0" prefWidth="150.0" style="-fx-background-color: skyblue;" />
             <Label fx:id="get_text" alignment="CENTER" layoutX="167.0" layoutY="124.0" prefHeight="26.0" prefWidth="150.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="26.0" layoutX="259.0" layoutY="166.0" stroke="BLACK" strokeType="INSIDE" width="28.0" />
+            <Pane fx:id="pane_carre1" layoutX="148.0" layoutY="168.0" prefHeight="38.0" prefWidth="39.0">
+               <children>
+                  <Rectangle fx:id="carre1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="26.0" layoutX="6.0" layoutY="6.0" stroke="BLACK" strokeType="INSIDE" width="28.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="pane_carre2" layoutX="223.0" layoutY="168.0" prefHeight="38.0" prefWidth="39.0">
+               <children>
+                  <Rectangle fx:id="carre2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="26.0" layoutX="6.0" layoutY="6.0" stroke="BLACK" strokeType="INSIDE" width="28.0" />
+                  <Line fx:id="line2" endX="9.0" endY="9.0" layoutX="20.0" layoutY="19.0" startX="-10.5" startY="-10.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="pane_carre3" layoutX="297.0" layoutY="168.0" prefHeight="38.0" prefWidth="39.0">
+               <children>
+                  <Rectangle fx:id="carre3" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="26.0" layoutX="6.0" layoutY="6.0" stroke="BLACK" strokeType="INSIDE" width="28.0" />
+                  <Line fx:id="line3" endX="9.0" endY="9.0" layoutX="20.0" layoutY="19.0" startX="-10.5" startY="-10.0" />
+                  <Line fx:id="line4" endX="0.5" endY="-13.0" layoutX="19.0" layoutY="32.0" startX="-12.5" startY="-0.5" />
+               </children>
+            </Pane>
          </children>
       </Pane>
    </children>

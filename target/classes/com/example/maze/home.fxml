@@ -55,7 +55,7 @@
                               <Font size="16.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btn_recents" layoutY="325.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="300.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px 0px 2px 0px;" stylesheets="@../../../../java/style/menu_game.css" text="RECENTS" textFill="WHITE" />
+                        <Button fx:id="btn_game" layoutY="325.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="300.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px 0px 2px 0px;" stylesheets="@../../../../java/style/menu_game.css" text="GAME" textFill="WHITE" />
                         <Button fx:id="btn_options" layoutY="443.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="300.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px 0px 4px 0px;" stylesheets="@../../../../java/style/menu_game.css" text="OPTIONS" textFill="WHITE" />
                      </children>
                   </AnchorPane>
@@ -68,12 +68,12 @@
                   </children>
                </HBox>
                 <VBox fx:id="boxGame" prefHeight="756.0" prefWidth="591.0">
+                    <fx:include source="game.fxml" />
                   <children>
                      <VBox fx:id="boxLabirynthe" prefHeight="580.0" prefWidth="669.0" />
                   </children></VBox>
-                <VBox fx:id="box_Recents" prefHeight="200.0" prefWidth="100.0" />
                   <VBox fx:id="boxRules" prefHeight="200.0" prefWidth="100.0">
-                      <fx:include source="rules.fxml"/>
+                      <fx:include source="rules.fxml" />
                     </VBox>
                 <VBox fx:id="boxOptions" prefHeight="200.0" prefWidth="100.0">
                       <fx:include source="option.fxml" />

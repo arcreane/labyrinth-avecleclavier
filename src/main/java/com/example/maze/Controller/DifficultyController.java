@@ -32,13 +32,22 @@ public class DifficultyController implements Initializable {
     private Line line4;
 
     @FXML
-    private Rectangle square;
+    private Rectangle carre1;
 
     @FXML
-    private Rectangle square2;
+    private Rectangle carre2;
 
     @FXML
-    private Rectangle square3;
+    private Rectangle carre3;
+
+    @FXML
+    private Pane pane_carre1;
+
+    @FXML
+    private Pane pane_carre2;
+
+    @FXML
+    private Pane pane_carre3;
 
     @FXML
     private TextField txt_title;
@@ -50,22 +59,48 @@ public class DifficultyController implements Initializable {
     private Label get_text;
 
     @FXML
-    private String[] level = {"Easy","Normal","Hard"};
+    private String[] level = {"Easy", "Normal", "Hard"};
 
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
+
+        boxDifficulty.getChildren().removeAll(pane_carre1, pane_carre2, pane_carre3, carre1, carre2, carre3, line2, line3, line4);
 
         choice_difficulty.getItems().addAll(level);
         choice_difficulty.setOnAction(this::getlevel);
 
     }
 
-    public void getlevel (ActionEvent event){
+    public void getlevel(ActionEvent event) {
 
         String mydifficulties = choice_difficulty.getValue();
         get_text.setText(mydifficulties);
 
-    }
+        if (get_text.getText().equals("Easy")) {
+            if (!pane_carre1.isVisible()) {
+                pane_carre1.getChildren().addAll(carre1);
+                pane_carre1.setVisible(true);
+            } else if (pane_carre1.isVisible()) {
+                pane_carre1.getChildren().removeAll(carre1);
+                pane_carre1.setVisible(false);
+            }
+        } else if (get_text.getText().equals("Normal")) {
 
+            if (!pane_carre2.isVisible()) {
+                pane_carre2.getChildren().addAll(carre2, line2);
+                pane_carre2.setVisible(true);
+            } else if (pane_carre2.isVisible()) {
+                pane_carre2.getChildren().removeAll(carre2, line2);
+
+            }
+        } else if (get_text.getText().equals("Hard")) {
+
+            if (!pane_carre3.isVisible()) {
+                pane_carre3.getChildren().addAll(carre3, line3, line4);
+            } else if (pane_carre3.isVisible()) {
+                pane_carre3.getChildren().removeAll(carre3, line3, line4);
+            }
+        }
+    }
 }

@@ -51,7 +51,7 @@ public class HomeController implements Initializable {
     private Button btn_quit;
 
     @FXML
-    private Button btn_recents;
+    private Button btn_game;
 
     @FXML
     private Button btn_rules;
@@ -65,18 +65,18 @@ public class HomeController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        interface_menu.getChildren().removeAll(btn_play,btn_options,btn_quit,btn_rules,btn_recents);
+        interface_menu.getChildren().removeAll(btn_play,btn_options,btn_quit,btn_rules,btn_game);
         boxGlobal.getChildren().removeAll(boxGame,boxRules,boxOptions,boxDifficulty);
 
 
         btn_menu.setOnMouseClicked(action -> {
             if(action.getButton().equals(MouseButton.PRIMARY)){
                 if(!interface_menu.isVisible()){
-                    interface_menu.getChildren().addAll(btn_play,btn_rules,btn_options,btn_quit,btn_recents);
+                    interface_menu.getChildren().addAll(btn_play,btn_rules,btn_options,btn_quit,btn_game);
                     interface_menu.setVisible(true);
                 }
                 else if(interface_menu.isVisible()){
-                    interface_menu.getChildren().removeAll(btn_play,btn_rules,btn_options,btn_quit,btn_recents);
+                    interface_menu.getChildren().removeAll(btn_play,btn_rules,btn_options,btn_quit,btn_game);
                     interface_menu.setVisible(false);
                 }
             };
@@ -91,6 +91,19 @@ public class HomeController implements Initializable {
                 else if(boxDifficulty.isVisible()){
                     boxGlobal.getChildren().removeAll(boxDifficulty);
                     boxDifficulty.setVisible(false);
+                }
+            };
+        });
+
+        btn_game.setOnMouseClicked(option->{
+            if(option.getButton().equals(MouseButton.PRIMARY)){
+                if(!boxGame.isVisible()){
+                    boxGlobal.getChildren().addAll(boxGame);
+                    boxGame.setVisible(true);
+                }
+                else if(boxGame.isVisible()){
+                    boxGlobal.getChildren().removeAll(boxGame);
+                    boxGame.setVisible(false);
                 }
             };
         });
