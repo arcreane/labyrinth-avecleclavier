@@ -4,12 +4,12 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="473.0" prefWidth="749.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.maze.Controller.OptionController">
+<AnchorPane prefHeight="473.0" prefWidth="749.0" style="-fx-background-color: #001824;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.maze.Controller.OptionController">
    <children>
-      <TextField fx:id="txt_options" alignment="CENTER" layoutX="279.0" layoutY="24.0" prefHeight="37.0" prefWidth="192.0" text="OPTIONS " />
-      <TextField fx:id="txt_sound" alignment="CENTER" layoutX="160.0" layoutY="131.0" prefHeight="37.0" prefWidth="67.0" text="Sound " />
+      <TextField fx:id="txt_options" alignment="CENTER" layoutX="279.0" layoutY="24.0" prefHeight="37.0" prefWidth="192.0" promptText="OPTIONS" style="-fx-border-color: white; -fx-border-width: 2px 2px 2px 2px;" />
+      <TextField fx:id="txt_sound" alignment="CENTER" layoutX="160.0" layoutY="131.0" prefHeight="37.0" prefWidth="67.0" promptText="Sound" style="-fx-border-color: white; -fx-border-width: 2px 2px 2px 2px;" />
       <Slider layoutX="282.0" layoutY="142.0" prefHeight="16.0" prefWidth="293.0" />
-      <TextField fx:id="txt_sound1" alignment="CENTER" layoutX="160.0" layoutY="192.0" prefHeight="37.0" prefWidth="67.0" text="Light" />
+      <TextField fx:id="txt_sound1" alignment="CENTER" layoutX="160.0" layoutY="192.0" prefHeight="37.0" prefWidth="67.0" promptText="Light" style="-fx-border-color: white; -fx-border-width: 2px 2px 2px;" />
       <Slider layoutX="282.0" layoutY="203.0" prefHeight="16.0" prefWidth="293.0" />
    </children>
 </AnchorPane>

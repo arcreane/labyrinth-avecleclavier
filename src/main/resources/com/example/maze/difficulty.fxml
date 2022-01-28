@@ -10,17 +10,14 @@
 
 <AnchorPane prefHeight="343.0" prefWidth="546.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.maze.Controller.DifficultyController">
    <children>
-      <Pane fx:id="boxDifficulty" layoutX="46.0" layoutY="35.0" prefHeight="273.0" prefWidth="455.0">
+      <Pane fx:id="boxDifficulty" layoutY="-1.0" prefHeight="349.0" prefWidth="547.0" style="-fx-background-color: #001824;">
          <children>
-            <Button fx:id="btn_confirm_hard" layoutX="196.0" layoutY="233.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="90.0" text="OK" />
-            <TextField fx:id="txt_title" alignment="CENTER" layoutX="161.0" layoutY="14.0" text="Difficulty Game " />
-            <ChoiceBox fx:id="choice_difficulty" layoutX="166.0" layoutY="61.0" prefWidth="150.0" />
-            <Pane layoutX="222.0" layoutY="167.0" prefHeight="38.0" prefWidth="39.0">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="26.0" layoutX="6.0" layoutY="6.0" stroke="BLACK" strokeType="INSIDE" width="28.0" />
-               </children>
-            </Pane>
+            <Button fx:id="btn_confirm_hard" layoutX="228.0" layoutY="232.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #001824; -fx-border-color: white;" text="OK" textFill="WHITE" />
+            <TextField fx:id="txt_title" alignment="CENTER" layoutX="194.0" layoutY="14.0" promptText="Difficulty Game" style="-fx-background-color: #001824; -fx-border-color: white;" />
+            <ChoiceBox fx:id="choice_difficulty" layoutX="199.0" layoutY="63.0" prefWidth="150.0" />
+            <Pane layoutX="222.0" layoutY="167.0" prefHeight="38.0" prefWidth="39.0" />
             <Label fx:id="get_text" alignment="CENTER" layoutX="167.0" layoutY="124.0" prefHeight="26.0" prefWidth="150.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="26.0" layoutX="259.0" layoutY="166.0" stroke="BLACK" strokeType="INSIDE" width="28.0" />
          </children>
       </Pane>
    </children>
